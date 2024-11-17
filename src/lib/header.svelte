@@ -9,6 +9,7 @@
     import info from "$lib/assets/burger-images/information-svgrepo-com black.svg";
     import news from "$lib/assets/burger-images/news-svgrepo-com(1) black.svg";
     import { isActive } from "$lib/store";
+    import { onMount } from "svelte";
 
     //import lists from "$lib/burger.svelte";
 
@@ -34,14 +35,17 @@
     }
 
     let outerWidth = $state(0);
+    let lists: any = $state();
 
-    let lists: any = [
+    onMount(() => {
+        lists = [
         { inner: "News", image: news, alt: "news" },
         { inner: "Forum", image: discussion, alt: "discussion", link: "https://forum.qbittorrent.org/" },
         { inner: "Wiki", image: info, alt: "wiki", link: "https://github.com/qbittorrent/qBittorrent/wiki/" },
         { inner: "Dev", image: github, alt: "github", link: "https://github.com/qbittorrent/qBittorrent/" },
         { inner: "Bugs", image: bug, alt: "bugs", link: "https://github.com/qbittorrent/qBittorrent/issues/" }
-    ];
+        ];
+    })
 </script>
 
 <svelte:window bind:outerWidth/>

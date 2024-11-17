@@ -13,10 +13,10 @@
  
     export let lists: any = [
         { inner: "News", image: news, alt: "news" },
-        { inner: "Forum", image: discussion, alt: "discussion" },
-        { inner: "Wiki", image: info, alt: "wiki" },
-        { inner: "Dev", image: github, alt: "github" },
-        { inner: "Bugs", image: bug, alt: "bugs" }
+        { inner: "Forum", image: discussion, alt: "discussion", link: "https://forum.qbittorrent.org/" },
+        { inner: "Wiki", image: info, alt: "wiki", link: "https://github.com/qbittorrent/qBittorrent/wiki/" },
+        { inner: "Dev", image: github, alt: "github", link: "https://github.com/qbittorrent/qBittorrent/" },
+        { inner: "Bugs", image: bug, alt: "bugs", link: "https://github.com/qbittorrent/qBittorrent/issues/" }
     ];
 </script>
 
@@ -24,8 +24,8 @@
         <div in:slide={{duration: 500}} out:slide={{duration: 300}} class="font-Inter text-[1.25rem] bg-black shadow-light rounded-lg max-w-56 w-48 p-3 text-white fixed z-10 right-4 top-24">
             <ul class="flex flex-col gap-6">
                 <!-- Using forEach loop to make lists from the data in the array -->
-                {#each lists as {inner, image, alt}}
-                    <li class="flex gap-3 items-center"><img src="{image}" alt="{alt}" class="w-10">{inner}</li>
+                {#each lists as {inner, image, alt, link}}
+                    <a href="{link}" target="_blank"><li class="flex gap-3 items-center"><img src="{image}" alt="{alt}" class="w-10">{inner}</li></a>
                 {/each}
             </ul>
         </div>
