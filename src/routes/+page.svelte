@@ -48,10 +48,10 @@
             <h1 class="drop-shadow">Free and reliable P2P <span class="text-blue-500">Bittorrent</span> client</h1>
 
             <div class="flex flex-col items-center w-[100%]">
-                <div class="flex flex-col gap-2 items-center p-2 md:p-3 shadow-light bg-black bg-opacity-15 rounded max-w-[60rem]">
+                <div class="flex flex-col gap-2 items-center p-2 md:p-3 shadow-light bg-black bg-opacity-15 rounded max-h-[50%] max-w-[60rem] min-w-[50%]">
                     {#each images as {image, alt}, i}
                         {#if i == index}
-                            <a href="{image}" target="_blank"><img class="max-h-[35rem] lg:max-w-[56rem]" src="{image}" alt="{alt}"></a>
+                            <a href="{image}" target="_blank"><img class="max-h-[15rem] md:max-h-[35rem] lg:max-w-[56rem]" src="{image}" alt="{alt}"></a>
                         {/if}
                     {/each}
                     <div class="flex justify-between w-[100%] gap-1">
