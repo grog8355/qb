@@ -51,7 +51,7 @@
                 <div class="flex flex-col gap-2 items-center p-2 md:p-3 shadow-light bg-black bg-opacity-15 rounded max-w-[60rem]">
                     {#each images as {image, alt}, i}
                         {#if i == index}
-                            <a href="{image}" target="_blank"><img class="max-h-[35rem] min-w-[56rem]" src="{image}" alt="{alt}"></a>
+                            <a href="{image}" target="_blank"><img class="max-h-[35rem] lg:max-w-[56rem]" src="{image}" alt="{alt}"></a>
                         {/if}
                     {/each}
                     <div class="flex justify-between w-[100%]">
