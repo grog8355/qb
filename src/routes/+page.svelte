@@ -44,7 +44,7 @@
 
 <main class="bg-gradient-to-b from-white from-30% via-blue-300 to-blue-500 w-screen h-screen font-Inter lg:mt-10">
     <section>
-        <article class="flex flex-col justify-center m-7 text-4xl sm:text-6xl lg:8xl font-semibold text-center gap-6">
+        <article class="flex flex-col justify-center m-7 text-4xl sm:text-6xl lg:8xl font-semibold text-center gap-10">
             <h1 class="drop-shadow">Free and reliable P2P <span class="text-blue-500">Bittorrent</span> client</h1>
 
             <div class="flex flex-col">
