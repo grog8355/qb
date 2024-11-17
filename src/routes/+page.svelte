@@ -47,11 +47,11 @@
         <article class="flex flex-col justify-center m-7 text-4xl sm:text-6xl lg:8xl font-semibold text-center gap-10">
             <h1 class="drop-shadow">Free and reliable P2P <span class="text-blue-500">Bittorrent</span> client</h1>
 
-            <div class="flex flex-col">
-                <div class="flex flex-col gap-2 justify-center items-center m-auto p-2 md:p-3 shadow-light bg-black bg-opacity-15 rounded">
+            <div class="flex flex-col items-center w-[100%]">
+                <div class="flex flex-col gap-2 items-center p-2 md:p-3 shadow-light bg-black bg-opacity-15 rounded max-w-[60rem]">
                     {#each images as {image, alt}, i}
                         {#if i == index}
-                            <a href="{image}" target="_blank"><img class="max-h-[32rem] w-[100%]" src="{image}" alt="{alt}"></a>
+                            <a href="{image}" target="_blank"><img class="max-h-[35rem] min-w-[56rem]" src="{image}" alt="{alt}"></a>
                         {/if}
                     {/each}
                     <div class="flex justify-between w-[100%]">
