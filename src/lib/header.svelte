@@ -8,8 +8,11 @@
     import github from "$lib/assets/burger-images/github-142-svgrepo-com black.svg";
     import info from "$lib/assets/burger-images/information-svgrepo-com black.svg";
     import news from "$lib/assets/burger-images/news-svgrepo-com(1) black.svg";
+    import download from "$lib/assets/download-minimalistic-svgrepo-com.svg";
+
     import { isActive } from "$lib/store";
     import { onMount } from "svelte";
+    import { slide } from "svelte/transition"
 
     //import lists from "$lib/burger.svelte";
 
@@ -66,10 +69,13 @@
                         {#each lists as {inner, image, alt, link}}
                             <a href="{link}" target="_blank"><li class="flex gap-2 items-center text-xl font-medium text-black shadow rounded-lg p-2 hover:shadow-light"><img src="{image}" alt="{alt}" class="w-10">{inner}</li></a>
                         {/each}
+                        <a href="https://www.fosshub.com/qBittorrent.html" target="_blank"><li class="flex bg-blue-500 rounded-md text-xl gap-2 shadow-blue text-white p-2 items-center font-medium active:shadow hover:shadow-blue-active"><img class="w-10" src="{download}" alt="download">Download</li></a>
                     </div>
             {/if}
         </ul>
         
-        <Burger />
+        {#if outerWidth < 1024}
+            <Burger />
+        {/if}
     </nav>
 </header>

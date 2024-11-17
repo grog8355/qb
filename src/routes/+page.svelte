@@ -8,6 +8,8 @@
     import lArrow from "$lib/assets/arrow-sm-left-svgrepo-com.svg";
     import rArrow from "$lib/assets/arrow-sm-right-svgrepo-com.svg";
 
+    import { slide } from "svelte/transition";
+
     let images: any = [
         { image: mainWindow, alt: "main window" },
         { image: mainWindowExpanded, alt: "main window expanded" },
